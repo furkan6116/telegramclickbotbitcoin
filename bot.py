@@ -61,11 +61,11 @@ def botyap():
                 await messages[0].click(0, 1)
                 time.sleep(1)
                 await client(LeaveChannelRequest(grupname))
-            elif """"There is a new site for you to visit! 🖥""" in event.message.message:
+            elif "There is a new site for you to visit! 🖥" in event.message.message:
                 await client.send_message('@BitcoinClick_bot', '🖥 Visit sites')
             elif """Sorry, there are no new ads available. 😟""" in event.message.message:
-                await client.send_message('me', 'BTC Botu 15 Dakika Beklemeye Girdi')
-                time.sleep(900)
+                await client.send_message('me', 'BTC Botu 1 Saat Beklemeye Girdi')
+                time.sleep(3600)
                 await client.send_message('@BitcoinClick_bot', '🖥 Visit sites')
 
         client.run_until_disconnected()
